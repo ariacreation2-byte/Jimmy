@@ -13,8 +13,8 @@ export default function Header() {
           <Image 
             src="/logo.jpg" 
             alt="Jimmy Junior" 
-            width={160}   // Logo width bada
-            height={80} 
+            width={200}   // Logo width bada
+            height={100} 
             className="h-16 w-auto" // Tailwind size control
           />
         </Link>

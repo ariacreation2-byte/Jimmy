@@ -19,7 +19,7 @@ export default function Home() {
           <div id="boys" className="grid">
             <CategoryCard
               title="Boys Tees"
-              image="https://images.unsplash.com/photo-1519456262455-5928bffcc8a0?q=80&w=1200&auto=format&fit=crop"
+              image="product/5516.jpg"
             />
             <CategoryCard
               title="Boys Shirts"

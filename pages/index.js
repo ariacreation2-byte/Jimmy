@@ -5,14 +5,12 @@ export default function Home() {
     <div>
       <Header />
 
-      <main style={{ padding: "20px" }}>
-        <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
-          Welcome to Jimmy Junior Kids Wear
-        </h2>
-        <p style={{ marginTop: "10px", color: "gray" }}>
-          Only Boys Collection – Sizes 1x10 & 16x26 available
+      <main className="p-8 text-center">
+        <h2 className="text-3xl font-bold mb-4">Welcome to Jimmy Junior</h2>
+        <p className="text-lg text-gray-700">
+          Premium Boys Wear Collection – Sizes available from 1x10 to 16x26
         </p>
       </main>
     </div>
   );
-  }
+}

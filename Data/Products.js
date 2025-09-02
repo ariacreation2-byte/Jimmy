@@ -4,7 +4,7 @@ const products = [
     title: "Blazer 0x4",
     size: "0x4",
     price: "450",
-    image: "/product/5516.jpg",
+    image: "/product/5501.jpg",
   },
   {
     id: 2,

@@ -9,19 +9,19 @@ export default function Home() {
       title: "Blazer 0x4",
       price: 450,
       size: "0x4",
-      image: "/products/5516.jpg",
+      image: "/products/5501.jpg",
     },
     {
       title: "Printed Polo",
       price: 899,
       size: "16x26",
-      image: "/products/5515.jpg",
+      image: "/products/5502.jpg",
     },
     {
       title: "Casual Shorts",
       price: 799,
       size: "10x20",
-      image: "/products/5505.jpg",
+      image: "/products/5503.jpg"
     },
     {
       title: "Denim Shirt",

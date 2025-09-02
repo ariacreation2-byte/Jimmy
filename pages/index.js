@@ -9,31 +9,31 @@ export default function Home() {
       title: "Blazer 0x4",
       price: 450,
       size: "0x4",
-      image: "products/5501.jpg",
+      image: "/2product/5501.jpg",
     },
     {
       title: "Printed Polo",
       price: 899,
       size: "16x26",
-      image: "/products/5502.jpg",
+      image: "/product/5502.jpg",
     },
     {
       title: "Casual Shorts",
       price: 799,
       size: "10x20",
-      image: "/products/5503.jpg"
+      image: "/product/5503.jpg",
     },
     {
       title: "Denim Shirt",
       price: 999,
       size: "0x4",
-      image: "/products/denim.jpg",
+      image: "/product/denim.jpg",
     },
     {
       title: "Boys T-shirt",
       price: 650,
       size: "16x26",
-      image: "/products/tshirt.jpg",
+      image: "/product/tshirt.jpg",
     },
   ];
 

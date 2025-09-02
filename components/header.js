@@ -1,32 +1,15 @@
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between px-6 py-4 shadow-md bg-white">
-      <Link href="/">
-        <Image 
-          src="/logo.png" 
-          alt="Jimmy Junior Logo" 
-          width={160} 
-          height={80} 
-          priority
-        />
-      </Link>
-      <nav className="flex gap-6">
-        <Link href="/" className="text-lg font-medium hover:text-blue-600">
-          Home
-        </Link>
-        <Link href="/products" className="text-lg font-medium hover:text-blue-600">
-          Products
-        </Link>
-        <Link href="/about" className="text-lg font-medium hover:text-blue-600">
-          About
-        </Link>
-        <Link href="/contact" className="text-lg font-medium hover:text-blue-600">
-          Contact
-        </Link>
-      </nav>
+    <header className="p-4 shadow-md flex items-center bg-white">
+      <Image 
+        src="/logo.png" 
+        alt="Jimmy Junior Logo" 
+        width={120} 
+        height={60} 
+      />
+      <h1 className="ml-4 text-xl font-bold">Jimmy Junior Kids Wear</h1>
     </header>
   );
-            }
+          }

@@ -44,9 +44,9 @@ export default function Home(){
           <h2>Best Sellers</h2>
           <div className="grid">
             <ProductCard
-              title="Blazer 1x10"
-              price="900.00"
-              image="product/5516.jpg-1556821841-6bdc31f0a8f8?q=80&w=1200&auto=format&fit=crop"
+              title="Blazer 0x4"
+              price="450.00"
+              image="product/5516.jpg
             />
             <ProductCard
               title="Printed Polo"

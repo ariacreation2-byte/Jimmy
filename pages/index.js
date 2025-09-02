@@ -9,7 +9,7 @@ export default function Home() {
       title: "Blazer 0x4",
       price: 450,
       size: "0x4",
-      image: "/products/5501.jpg",
+      image: "products/5501.jpg",
     },
     {
       title: "Printed Polo",

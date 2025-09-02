@@ -1,41 +1,35 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-
 export default function Home() {
   return (
-    <div>
-      {/* Header */}
-      <Header />
-
-      {/* Hero Section */}
-      <section className="bg-gray-100 text-center py-20">
-        <h1 className="text-4xl font-bold mb-4">Jimmy Junior Kids Wear</h1>
-        <p className="text-lg">Premium Boys’ Wear – Made in India, Loved Worldwide</p>
+    <div className="p-6">
+      <section className="text-center py-12">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">Jimmy Junior Kids Wear</h2>
+        <p className="text-lg text-gray-600">
+          Premium Boys’ Wear – Made in India, Loved Worldwide 🌍
+        </p>
       </section>
 
-      {/* Collections */}
-      <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-white shadow-lg p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">Boys Collection</h2>
-          <p>Trendy outfits for boys in all sizes (1x10 to 16x26).</p>
-        </div>
-        <div className="bg-white shadow-lg p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">International Shipping</h2>
-          <p>India 🇮🇳 | Middle East 🇦🇪 | USA 🇺🇸 | Thailand 🇹🇭</p>
-        </div>
-        <div className="bg-white shadow-lg p-6 rounded-2xl">
-          <h2 className="text-xl font-semibold mb-2">Order on WhatsApp</h2>
-          <a
-            href="https://wa.me/919755502072"
-            className="text-green-600 font-bold hover:underline"
-          >
-            +91 9755502072
-          </a>
-        </div>
+      <section className="text-center py-8 bg-gray-50 rounded-lg shadow-md">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">Boys Collection</h3>
+        <p className="text-gray-600">
+          Trendy outfits for boys in all sizes <b>(1x10 to 16x26)</b>.
+        </p>
       </section>
 
-      {/* Footer */}
-      <Footer />
+      <section className="text-center py-8">
+        <h3 className="text-2xl font-semibold text-gray-800 mb-2">🌎 International Shipping</h3>
+        <p className="text-gray-600">
+          India 🇮🇳 | Middle East 🇦🇪 | USA 🇺🇸 | Thailand 🇹🇭
+        </p>
+      </section>
+
+      <section className="text-center py-8">
+        <a
+          href="https://wa.me/919755502072"
+          className="bg-green-500 text-white px-6 py-3 rounded-lg shadow hover:bg-green-600 transition"
+        >
+          Order on WhatsApp
+        </a>
+      </section>
     </div>
   );
 }

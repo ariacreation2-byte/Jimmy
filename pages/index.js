@@ -46,7 +46,7 @@ export default function Home(){
             <ProductCard
               title="Blazer 1x10"
               price="900.00"
-              image="https://5516.jpg-1556821841-6bdc31f0a8f8?q=80&w=1200&auto=format&fit=crop"
+              image="product/5516.jpg-1556821841-6bdc31f0a8f8?q=80&w=1200&auto=format&fit=crop"
             />
             <ProductCard
               title="Printed Polo"

@@ -26,6 +26,7 @@ export default function ProductCard({ title, price, image }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            onClick={() => setIsOpen(false)} // background click close
           >
             <motion.img
               src={image}
@@ -35,7 +36,9 @@ export default function ProductCard({ title, price, image }) {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.3 }}
+              onClick={(e) => e.stopPropagation()} // prevent background close
             />
+
             {/* Close Button */}
             <button
               className="absolute top-5 right-5 bg-white text-black px-3 py-1 rounded"

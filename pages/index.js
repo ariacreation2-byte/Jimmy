@@ -82,7 +82,7 @@ export default function Home(){
           <div>© {new Date().getFullYear()} Jimmy Junior — The Premium Brand</div>
           <div style={{display:"flex", gap:14}}>
             <a href="https://wa.me/919755502072" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a href="#" aria-disabled="true" style={{color:"var(--muted)"}}>Instagram</a>
+            <a href="#" https://www.instagram.com/jimmy_junior_kids_wear" style={{color:"var(--muted)"}}>Instagram</a>
             <a href="#" aria-disabled="true" style={{color:"var(--muted)"}}>Facebook</a>
           </div>
         </div>

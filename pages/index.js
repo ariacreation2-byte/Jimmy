@@ -1,91 +1,92 @@
-export default function Home() {
+// pages/index.js
+import Header from "../components/Header";
+import Hero from "../components/Hero";
+import ShippingBar from "../components/ShippingBar";
+import CategoryCard from "../components/CategoryCard";
+import ProductCard from "../components/ProductCard";
+import Newsletter from "../components/Newsletter";
+
+export default function Home(){
   return (
-    <div className="font-sans text-gray-800">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-16 px-6 text-center">
-        <img 
-          src="/logo.png" 
-          alt="Jimmy Junior Kids Wear" 
-          className="mx-auto mb-6 w-28 h-28 rounded-full shadow-lg"
-        />
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Jimmy Junior Kids Wear
-        </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto">
-          Premium Boys’ Wear – Made in India, Loved Worldwide
-        </p>
-        <a 
-          href="https://wa.me/919755502072" 
-          className="inline-block mt-6 bg-white text-blue-600 font-semibold px-6 py-3 rounded-full shadow hover:bg-gray-100 transition"
-        >
-          Order on WhatsApp
-        </a>
-      </section>
+    <>
+      <Header />
+      <Hero />
+      <ShippingBar />
 
-      {/* Boys Collection */}
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Boys Collection</h2>
-        <p className="max-w-2xl mx-auto text-lg text-gray-600">
-          Trendy outfits for boys in all sizes (1x10 to 16x26). Designed with comfort and style for every occasion.
-        </p>
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div className="p-4 border rounded-xl shadow hover:shadow-lg transition">
-            <img src="/products/product1.jpg" alt="Boys Wear 1" className="rounded-lg mb-3"/>
-            <p className="font-medium">Casual Set</p>
-          </div>
-          <div className="p-4 border rounded-xl shadow hover:shadow-lg transition">
-            <img src="/products/product2.jpg" alt="Boys Wear 2" className="rounded-lg mb-3"/>
-            <p className="font-medium">Party Wear</p>
-          </div>
-          <div className="p-4 border rounded-xl shadow hover:shadow-lg transition">
-            <img src="/products/product3.jpg" alt="Boys Wear 3" className="rounded-lg mb-3"/>
-            <p className="font-medium">Denim Collection</p>
-          </div>
-          <div className="p-4 border rounded-xl shadow hover:shadow-lg transition">
-            <img src="/products/product4.jpg" alt="Boys Wear 4" className="rounded-lg mb-3"/>
-            <p className="font-medium">Ethnic Style</p>
+      {/* Categories */}
+      <section className="section">
+        <div className="container">
+          <h2>Categories</h2>
+          <div id="boys" className="grid">
+            <CategoryCard
+              title="Boys Tees"
+              image="https://images.unsplash.com/photo-1519456262455-5928bffcc8a0?q=80&w=1200&auto=format&fit=crop"
+            />
+            <CategoryCard
+              title="Boys Shirts"
+              image="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1200&auto=format&fit=crop"
+            />
+            <CategoryCard
+              title="Shorts & Bottoms"
+              image="https://images.unsplash.com/photo-1546954418-5fd4d3d7b8a8?q=80&w=1200&auto=format&fit=crop"
+            />
+            <CategoryCard
+              title="Accessories"
+              image="https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1200&auto=format&fit=crop"
+            />
           </div>
         </div>
       </section>
 
-      {/* International Shipping */}
-      <section className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">International Shipping</h2>
-        <p className="text-lg text-gray-600 mb-6">
-          We proudly deliver worldwide with fast and reliable shipping.
-        </p>
-        <div className="flex justify-center space-x-6 text-4xl">
-          <span>🇮🇳</span>
-          <span>🇦🇪</span>
-          <span>🇺🇸</span>
-          <span>🇹🇭</span>
+      {/* Best Sellers */}
+      <section id="bestsellers" className="section">
+        <div className="container">
+          <h2>Best Sellers</h2>
+          <div className="grid">
+            <ProductCard
+              title="Organic Cotton Tee"
+              price="699.00"
+              image="https://images.unsplash.com/photo-1556821841-6bdc31f0a8f8?q=80&w=1200&auto=format&fit=crop"
+            />
+            <ProductCard
+              title="Printed Polo"
+              price="899.00"
+              image="https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?q=80&w=1200&auto=format&fit=crop"
+            />
+            <ProductCard
+              title="Casual Shorts"
+              price="799.00"
+              image="https://images.unsplash.com/photo-1618354694520-3f9b8b87b84b?q=80&w=1200&auto=format&fit=crop"
+            />
+            <ProductCard
+              title="Denim Shirt"
+              price="999.00"
+              image="https://images.unsplash.com/photo-1503342217505-b0a15cf70489?q=80&w=1200&auto=format&fit=crop"
+            />
+          </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
-        <p className="text-lg text-gray-600">
-          Have questions or want to place a bulk order? Contact us directly.
-        </p>
-        <a 
-          href="https://wa.me/919755502072" 
-          className="inline-block mt-6 bg-green-500 text-white font-semibold px-6 py-3 rounded-full shadow hover:bg-green-600 transition"
-        >
-          Chat on WhatsApp
-        </a>
-        <div className="mt-6 flex justify-center space-x-6 text-gray-600 text-2xl">
-          <a href="https://wa.me/919755502072">💬</a>
-          <a href="#">📷</a>
-          <a href="#">📘</a>
+      {/* Sizes strip */}
+      <section id="sizes" className="section" style={{paddingTop:0}}>
+        <div className="container" style={{background:"var(--card)", border:"1px solid var(--border)", borderRadius:16, padding:16}}>
+          <strong>Sizes:</strong> 1x10, 16x26 & custom bulk on request.
         </div>
       </section>
+
+      <Newsletter />
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-white py-6 text-center">
-        <p>🌍 English | हिन्दी | العربية | ไทย</p>
-        <p className="mt-2 text-sm">© 2025 Jimmy Junior Kids Wear. All rights reserved.</p>
+      <footer className="footer">
+        <div className="container" style={{display:"flex", justifyContent:"space-between", gap:12, flexWrap:"wrap"}}>
+          <div>© {new Date().getFullYear()} Jimmy Junior — The Premium Brand</div>
+          <div style={{display:"flex", gap:14}}>
+            <a href="https://wa.me/919755502072" target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="#" aria-disabled="true" style={{color:"var(--muted)"}}>Instagram</a>
+            <a href="#" aria-disabled="true" style={{color:"var(--muted)"}}>Facebook</a>
+          </div>
+        </div>
       </footer>
-    </div>
+    </>
   );
 }

@@ -44,7 +44,7 @@ export default function Home(){
           <h2>Best Sellers</h2>
           <div className="grid">
             <ProductCard
-              title="Organic Cotton Tee"
+              title="5516.jpg"
               price="699.00"
               image="https://images.unsplash.com/photo-1556821841-6bdc31f0a8f8?q=80&w=1200&auto=format&fit=crop"
             />

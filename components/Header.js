@@ -11,7 +11,7 @@ export default function Header() {
         {/* Left: Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image 
-            src="/logo.png" 
+            src="/logo.jpg" 
             alt="Jimmy Junior" 
             width={160}   // Logo width bada
             height={80} 

@@ -7,7 +7,7 @@ export default function Footer() {
         <a href="#" className="hover:underline">Instagram</a>
         <a href="#" className="hover:underline">Facebook</a>
       </div>
-      <p className="mt-4 text-sm text-gray-400">© 2025 Jimmy Junior Kids Wear. All rights reserved.</p>
+      <p className="mt-4 text-sm text-gray-400">© 2025 Jimmy Junior. All rights reserved.</p>
     </footer>
   );
 }

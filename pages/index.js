@@ -1,105 +1,77 @@
 import { useState } from "react";
-import Header from "../components/Header";
 import ProductCard from "../components/ProductCard";
-import Newsletter from "../components/Newsletter";
 
 export default function Home() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   const products = [
     {
       title: "Blazer 0x4",
-      price: "450.00",
+      price: 450,
       size: "0x4",
-      image: "/product/5516.jpg",
+      image: "/products/5516.jpg",
     },
     {
       title: "Printed Polo",
-      price: "899.00",
+      price: 899,
       size: "16x26",
-      image:
-        "https://images.unsplash.com/photo-1539533113208-f6df8cc8b543?q=80&w=1200&auto=format&fit=crop",
+      image: "/products/5515.jpg",
     },
     {
       title: "Casual Shorts",
-      price: "799.00",
+      price: 799,
       size: "10x20",
-      image:
-        "https://images.unsplash.com/photo-1618354694520-3f9b8b87b84b?q=80&w=1200&auto=format&fit=crop",
+      image: "/products/5505.jpg",
     },
     {
       title: "Denim Shirt",
-      price: "999.00",
+      price: 999,
       size: "0x4",
-      image:
-        "https://images.unsplash.com/photo-1503342217505-b0a15cf70489?q=80&w=1200&auto=format&fit=crop",
+      image: "/products/denim.jpg",
     },
     {
       title: "Boys T-shirt",
-      price: "650.00",
+      price: 650,
       size: "16x26",
-      image:
-        "https://images.unsplash.com/photo-1519456262455-5928bffcc8a0?q=80&w=1200&auto=format&fit=crop",
+      image: "/products/tshirt.jpg",
     },
   ];
 
   return (
-    <>
-      <Header />
-
-      {/* Products */}
-      <section id="products" className="section">
-        <div className="container">
-          <h2 className="text-2xl font-bold mb-6">Our Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {products.map((product, index) => (
-              <ProductCard
-                key={index}
-                {...product}
-                onClick={() => setSelectedImage(product.image)}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <Newsletter />
-
-      {/* Zoom Modal */}
-      {selectedImage && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={() => setSelectedImage(null)}
-        >
-          <img
-            src={selectedImage}
-            alt="Zoomed"
-            className="max-w-[90%] max-h-[90%] rounded-xl shadow-lg"
+    <div className="p-6">
+      <h2 className="text-2xl font-bold mb-6">Best Sellers</h2>
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+        {products.map((product, index) => (
+          <ProductCard
+            key={index}
+            {...product}
+            onClick={() => setSelectedProduct(product)}
           />
+        ))}
+      </div>
+
+      {/* Modal */}
+      {selectedProduct && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 backdrop-blur z-50"
+          onClick={() => setSelectedProduct(null)}
+        >
+          <div className="max-w-lg w-full p-4">
+            <img
+              src={selectedProduct.image}
+              alt={selectedProduct.title}
+              className="w-full rounded-xl"
+            />
+            <h3 className="text-white text-xl font-semibold mt-4">
+              {selectedProduct.title}
+            </h3>
+            <p className="text-gray-300">Size: {selectedProduct.size}</p>
+            <p className="text-yellow-400 font-bold">
+              ₹{selectedProduct.price}
+            </p>
+          </div>
         </div>
       )}
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container flex justify-between flex-wrap gap-4 py-4">
-          <div>© {new Date().getFullYear()} Jimmy Junior — The Premium Brand</div>
-          <div className="flex gap-4">
-            <a href="https://wa.me/919755502072" target="_blank" rel="noreferrer">
-              WhatsApp
-            </a>
-            <a
-              href="https://www.instagram.com/jimmy_junior_kids_wear"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Instagram
-            </a>
-            <a href="#" aria-disabled="true" className="text-gray-500">
-              Facebook
-            </a>
-          </div>
-        </div>
-      </footer>
-    </>
+    </div>
   );
-}
+                       }
